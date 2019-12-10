@@ -17,7 +17,7 @@ cannon = asteroids[vlen.index(max(vlen))]
 
 hook = (-0.5, 0)
 targets = [(a[0]-cannon[0], a[1]-cannon[1]) for a in asteroids if a != cannon]
-targets.append((-0.5, 0))
+targets.append(hook)
 targets = sorted(targets, key=angle_dist)
 idx = targets.index(hook)
 targets = targets[idx+1:]+targets[:idx]
